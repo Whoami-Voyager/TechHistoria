@@ -1,28 +1,26 @@
-import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import TimeCard from "./TimeCard"
 import Search from "./Search"
-import CreateEvent from "./CreateEvent"
 
-function Timeline() {
-    const [timeLine, setTimeLine] = useState([])
+function Timeline({ timeLine, searchTimeline, setSearchTimeLine }) {
 
-    useEffect(() => {
-        fetch("http://localhost:4000/history")
-            .then(r => r.json())
-            .then(data => {
-                setTimeLine(data)
-            })
-    }, [])
+    // Filters through timeline for the Search function
+    const filteredTimeLine = timeLine.filter((time) => {
+        return time.title.toLowerCase().includes(searchTimeline.toLowerCase())
+    })
 
-    const timeLineInfo = timeLine.map((time) => {
+    // Renders all the images, years, and titles
+    const timeLineInfo = filteredTimeLine.map((time) => {
         return <TimeCard key={time.id} time={time} />
     })
 
+    // The entire home Page
     return (
         <>
-            <Search/>
+            <h1>TechHistoria</h1>
+            <Search setSearchTimeLine={setSearchTimeLine} />
             {timeLineInfo}
-            <CreateEvent/>
+            <Link to="/createhistory">Create History</Link>
         </>
     )
 }
