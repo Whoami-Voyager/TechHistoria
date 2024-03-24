@@ -19,16 +19,16 @@ function TimeDetails() {
 
     // Renders the paragraph
     const paragraphs = detail.details?.map((detail, index) => {
-        return <p key={index} className="text-balance">{detail}</p>
+        return <p key={index} className="m-5">{detail}</p>
     })
 
     // renders all the details of the event
     return (
         <>
-            <Link to="/">Home</Link>
-            <h1 className="text-7xl">{detail.title}</h1>
-            <h2>{detail.company}</h2>
-            <img src={detail.image} className="float-left"/>
+            <Link to="/" className="bg-blue-700 text-4xl my-3 rounded-md">Home</Link>
+            <h1 className="text-7xl my-20 text-center">{detail.title}</h1>
+            <h2 className="float-right text-5xl m-7">{detail.company}</h2>
+            <img src={detail.image} className="float-left mx-12 h-3/5 w-3/5" />
             {paragraphs}
             <a href={detail.wikipedia} target="_blank">Wikipedia</a>
         </>
