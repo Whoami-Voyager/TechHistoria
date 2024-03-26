@@ -18,35 +18,27 @@ function TimeDetails() {
             .then(data => {
                 setDetail(data)
             })
-    }, [])
+    }, [detailId])
 
     useEffect(() => {
         detail.associatedcardid?.map((id) => {
             fetch(`http://localhost:4000/history/${id}`)
                 .then(r => r.json())
                 .then(data => {
-                    const newHistory = {
-                        "id": data.id,
-                        "image": data.image,
-                        "year": data.year,
-                        "title": data.title,
-                        "associatedcardid": [
-                            data.associatedcardid
-                        ],
-                        "company": data.company,
-                        "wikipedia": data.wikipedia,
-                        "details": data.details
-                    }
-                    console.log(newHistory)
+                    setHistory(old => [...old, data])
                 })
         })
-
-    }, [detail])
+    }, [detail, detailId])
     console.log(history)
+
+    // Renders the associated events at the bottom of details
+    const historyDetail = history.map((history, index) => {
+        return <TimeCard time={history} key={index} />
+    })
 
     // Renders the paragraph
     const paragraphs = detail.details?.map((detail, index) => {
-        return <p key={index} className="p-2 m-5 font-Inter">{detail}</p>
+        return <p key={index} className="p-2 m-5 text-2xl font-Inter">{detail}</p>
     })
 
     // renders all the details of the event
@@ -55,15 +47,16 @@ function TimeDetails() {
             <Link to="/" className="border-2 border-gray-400 rounded-lg p-2 m-9 hover:border-gray-900">Home</Link>
             <h1 className="text-7xl my-20 text-center">{detail.title}</h1>
             <div className="flex flex-row m-5 font-Inter">
-                <img src={detail.image} className="m-5 h-3/5 w-3/5" />
+                <img alt="" src={detail.image} className="m-5 h-3/5 w-3/5" />
                 <div className="flex flex-col items-end w-full">
                     <h3 className="text-7xl p-2 m-12">{detail.year}</h3>
                     <h2 className="text-5xl p-3 m-8">{detail.company}</h2>
                 </div>
             </div>
             {paragraphs}
-            <a href={detail.wikipedia} target="_blank" className="border-2 border-gray-400 rounded-lg p-2 m-6 text-center font-Inter hover:border-gray-900">Wikipedia</a>
+            <a href={detail.wikipedia} target="_blank" rel="noreferrer" className="border-2 border-gray-400 rounded-lg p-2 m-6 text-center font-Inter hover:border-gray-900">Wikipedia</a>
             <h2 className="my-36 p-2 text-3xl font-Inter">Associated Historical events:</h2>
+            {historyDetail}
         </>
     )
 }
