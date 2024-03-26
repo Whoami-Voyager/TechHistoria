@@ -31,8 +31,8 @@ function CreateEvent({ addHistory }) {
     // Renders all the forms and submit
     return (
         <>
-            <Link to="/">Home</Link>
-            <form onSubmit={(e) => {
+            <Link to="/" className="border-2 border-gray-400 rounded-lg p-2 m-9 hover:border-gray-900">Home</Link>
+            <form className="m-12 flex-auto" onSubmit={(e) => {
                 e.preventDefault();
                 addHistory(formData);
                 // Reset form data after submitting
@@ -45,14 +45,19 @@ function CreateEvent({ addHistory }) {
                     details: []
                 });
             }}>
-                <input name="image" placeholder="Image" type="text" value={formData.image} onChange={handleChange}></input>
-                <input name="year" placeholder="Year" type="text" value={formData.year} onChange={handleChange}></input>
-                <input name="title" placeholder="Title" type="text" value={formData.title} onChange={handleChange}></input>
-                <input name="company" placeholder="Inventor or Company" type="text" value={formData.company} onChange={handleChange}></input>
-                <input name="wikipedia" placeholder="Wikipedia" type="text" value={formData.wikipedia} onChange={handleChange}></input>
-                <input name="details" placeholder="Paragraph" value={formData.details} onChange={handleChange}></input>
-                <button type="submit">Submit</button>
+                <input className="border-2 border-black rounded-md" name="image" placeholder="Image" type="text" value={formData.image} onChange={handleChange}></input>
+                <input className="border-2 border-black rounded-md" name="year" placeholder="Year" type="text" value={formData.year} onChange={handleChange}></input>
+                <input className="border-2 border-black rounded-md" name="title" placeholder="Title" type="text" value={formData.title} onChange={handleChange}></input>
+                <input className="border-2 border-black rounded-md" name="company" placeholder="Inventor or Company" type="text" value={formData.company} onChange={handleChange}></input>
+                <input className="border-2 border-black rounded-md" name="wikipedia" placeholder="Wikipedia" type="text" value={formData.wikipedia} onChange={handleChange}></input>
+                <input className="border-2 border-black rounded-md" name="details" placeholder="Paragraph" value={formData.details} onChange={handleChange}></input>
+                <button className="border-2 border-gray-400 rounded-md p-2 m-8 hover:border-black" type="submit">Submit</button>
             </form>
+            <select>
+                <option>An option</option>
+                <option>Another Option</option>
+                <option>Yet another option</option>
+            </select>
         </>
     )
 }

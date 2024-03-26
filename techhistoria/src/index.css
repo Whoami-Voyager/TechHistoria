@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'IBM';
+    src: url(../public/IBM-Logo.ttf);
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../public/Inter-Regular.otf);
+}

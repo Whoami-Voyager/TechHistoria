@@ -17,10 +17,10 @@ function Timeline({ timeLine, searchTimeline, setSearchTimeLine }) {
     // The entire home Page
     return (
         <>
-            <h1>TechHistoria</h1>
+            <h1 className="text-9xl p-4 m-16 text-center font-IBM text-blue-400">TechHistoria</h1>
             <Search setSearchTimeLine={setSearchTimeLine} />
             {timeLineInfo}
-            <Link to="/createhistory">Create History</Link>
+            <Link className="border-2 border-gray-400 rounded-lg p-2 m-9 font-Inter hover:border-gray-900" to="/createhistory">Make History</Link>
         </>
     )
 }
