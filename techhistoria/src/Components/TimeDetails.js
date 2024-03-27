@@ -44,29 +44,31 @@ function TimeDetails() {
 
     // Renders the associated events at the bottom of details
     const historyDetail = history.map((history, index) => {
-        return <TimeCard time={history} key={index} handleDetailLinkClick={handleDetailLinkClick}/>
+        return <TimeCard time={history} key={index} handleDetailLinkClick={handleDetailLinkClick} />
     })
 
     // Renders the paragraph
     const paragraphs = detail.details?.map((detail, index) => {
-        return <p key={index} className="p-2 m-5 text-2xl font-Inter">{detail}</p>
+        return <p key={index} className="p-2 m-5 text-xl font-Inter">{detail}</p>
     })
 
     // renders all the details of the event
     return (
         <>
-            <Link to="/" className="button">Home</Link>
-            <h1 className="text-7xl my-20 text-center">{detail.title}</h1>
-            <div className="flex flex-row m-5 font-Inter">
-                <img alt="" src={detail.image} className="m-5 h-3/5 w-3/5" />
-                <div className="flex flex-col items-end w-full">
-                    <h3 className="text-7xl p-2 m-12">{detail.year}</h3>
-                    <h2 className="text-5xl p-3 m-8">{detail.company}</h2>
+            <div className="my-6">
+                <Link to="/" className="button">⬅️ Home</Link>
+            </div>
+            <h1 className="my-20 text-4xl text-center xl:text-7xl">{detail.title}</h1>
+            <div className="flex flex-col m-5 font-Inter xl:flex-row">
+                <img alt="" src={detail.image} className="m-5 xl:h-3/5 xl:w-3/5" />
+                <div className="flex flex-col xl:items-end w-full">
+                    <h3 className="text-4xl p-2 text-center xl:text-7xl xl:p-2 xl:m-12">{detail.year}</h3>
+                    <h2 className="text-4xl p-2 text-center xl:text-5xl xl:p-3 xl:m-8">{detail.company}</h2>
                 </div>
             </div>
             {paragraphs}
             <a href={detail.wikipedia} target="_blank" rel="noreferrer" className="border-2 border-gray-400 rounded-lg p-2 m-6 text-center font-Inter shadow-lg hover:border-gray-900">Wikipedia</a>
-            <h2 className="m-36 text-center p-2 text-3xl font-Inter">Associated Historical events:</h2>
+            <h2 className="m-12 text-center p-2 text-3xl font-Inter xl:m-36">Associated Historical events:</h2>
             {historyDetail}
         </>
     )

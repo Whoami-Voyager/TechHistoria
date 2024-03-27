@@ -13,9 +13,9 @@
 }
 
 .button {
-    @apply border-2 border-gray-400 rounded-lg p-2 m-9 font-Inter hover:border-gray-900;
+    @apply border-2 text-center border-gray-400 rounded-lg p-2 m-9 font-Inter hover:border-gray-900;
 }
 
 .search{
-    @apply border-2 rounded-lg shadow-xl hover:border-gray-400 transition duration-300 transform hover:-translate-y-1
+    @apply w-4/5 text-center m-9 mb-20 border-2 rounded-lg shadow-xl hover:border-gray-400 transition duration-300 transform hover:-translate-y-1
 }
