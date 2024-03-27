@@ -24,10 +24,10 @@ function Timeline({ timeLine, searchTimeline, setSearchTimeLine, decade, setDeca
     // The entire home Page
     return (
         <>
-            <h1 className="font-IBM text-blue-400 sm:text-5xl m-5 md:text-7xl lg:text-9xl">TechHistoria</h1>
+            <h1 className="font-IBM text-blue-400 text-center text-3xl py-8 sm:text-5xl lg:text-6xl xl:text-9xl sm:my-10 md:my-12 lg:my-28 ">TechHistoria</h1>
             <Search setSearchTimeLine={setSearchTimeLine} />
             <DecadeFilter setDecade={setDecade} />
-            {timeLineInfo}
+            {/* {timeLineInfo} */}
             <Link className="button" to="/createhistory">Make History</Link>
         </>
     )

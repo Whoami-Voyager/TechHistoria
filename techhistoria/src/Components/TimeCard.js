@@ -8,7 +8,7 @@ function TimeCard({ time, handleDetailLinkClick }) {
             <div className="flex flex-col ml-5">
                 <h1 className="text-7xl pt-12 mb-28">{time.year}</h1>
                 <h3 className="text-4xl p-5 mb-6">{time.title}</h3>
-                <Link to={`/history/${time.id}`} onClick={handleDetailLinkClick} className="button w-20">Details</Link>
+                <Link to={`/history/${time.id}`} onClick={handleDetailLinkClick} className="button xl:w-20">Details</Link>
             </div>
         </div>
     );
