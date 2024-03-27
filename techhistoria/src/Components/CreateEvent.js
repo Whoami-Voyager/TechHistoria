@@ -31,7 +31,7 @@ function CreateEvent({ addHistory }) {
     // Renders all the forms and submit
     return (
         <>
-            <Link to="/" className="border-2 border-gray-400 rounded-lg p-2 m-9 hover:border-gray-900">Home</Link>
+            <Link to="/" className="button">Home</Link>
             <form className="m-12 flex-auto" onSubmit={(e) => {
                 e.preventDefault();
                 addHistory(formData);
@@ -51,13 +51,8 @@ function CreateEvent({ addHistory }) {
                 <input className="border-2 border-black rounded-md" name="company" placeholder="Inventor or Company" type="text" value={formData.company} onChange={handleChange}></input>
                 <input className="border-2 border-black rounded-md" name="wikipedia" placeholder="Wikipedia" type="text" value={formData.wikipedia} onChange={handleChange}></input>
                 <input className="border-2 border-black rounded-md" name="details" placeholder="Paragraph" value={formData.details} onChange={handleChange}></input>
-                <button className="border-2 border-gray-400 rounded-md p-2 m-8 hover:border-black" type="submit">Submit</button>
+                <button className="button" type="submit">Submit</button>
             </form>
-            <select>
-                <option>An option</option>
-                <option>Another Option</option>
-                <option>Yet another option</option>
-            </select>
         </>
     )
 }

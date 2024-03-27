@@ -11,3 +11,7 @@
     font-family: 'Inter';
     src: url(../public/Inter-Regular.otf);
 }
+
+.button {
+    @apply border-2 border-gray-400 rounded-lg p-2 m-9 font-Inter hover:border-gray-900;
+}
