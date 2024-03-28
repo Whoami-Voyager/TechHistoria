@@ -13,20 +13,20 @@ function TimeDetails({ setSearchTimeLine, setDecade }) {
 
     // Fetches the detail information on load
     useEffect(() => {
-        fetch(`http://localhost:4000/history/${detailId}`)
+        fetch(`https://api.jsonbin.io/v3/b/6605e015ad19ca34f8515dee`)
             .then(r => r.json())
             .then(data => {
-                setDetail(data)
+                setDetail(data.record.history[detailId])
             })
     }, [detailId])
 
     // Is used for grabbing all the cards at the bottom of detail
     useEffect(() => {
         detail.associatedcardid?.map((id) => {
-            fetch(`http://localhost:4000/history/${id}`)
+            fetch(`https://api.jsonbin.io/v3/b/6605e015ad19ca34f8515dee`)
                 .then(r => r.json())
                 .then(data => {
-                    setHistory(old => [...old, data])
+                    setHistory(old => [...old, data.record.history[id]])
                 })
         })
     }, [detail])

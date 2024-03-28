@@ -16,16 +16,16 @@ function App() {
 
   // Fetches on Load
   useEffect(() => {
-    fetch("http://localhost:4000/history")
+    fetch(`https://api.jsonbin.io/v3/b/6605e015ad19ca34f8515dee`)
       .then(r => r.json())
       .then(data => {
-        setTimeLine(data)
+        setTimeLine(data.record.history)
       })
   }, [])
 
   // the function that pushes the form Data to the backend
   function addHistory(newEvent) {
-    fetch("http://localhost:4000/history", {
+    fetch("https://api.jsonbin.io/v3/b/6605e015ad19ca34f8515dee", {
       method: "POST",
       headers: {
         "Content-type": "Application/JSON"
@@ -34,7 +34,7 @@ function App() {
     })
       .then(r => r.json())
       .then(data => {
-        const addNewHistory = [...timeLine, data]
+        const addNewHistory = [...timeLine, data.record.history]
         setTimeLine(addNewHistory)
       })
   }
