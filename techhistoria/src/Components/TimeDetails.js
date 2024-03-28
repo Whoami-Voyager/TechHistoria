@@ -55,6 +55,7 @@ function TimeDetails() {
     // renders all the details of the event
     return (
         <>
+            <h1 className="font-IBM text-blue-400 text-center text-1xl my-12 pb-10 sm:text-5xl lg:text-6xl xl:text-9xl sm:my-12 md:my-12 lg:my-28 ">TechHistoria</h1>
             <div className="my-6">
                 <Link to="/" className="button">⬅️ Home</Link>
             </div>
