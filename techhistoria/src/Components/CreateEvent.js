@@ -36,15 +36,23 @@ function CreateEvent({ addHistory }) {
     return (
         <>
             <div className="my-6">
-                <Link to="/" className="button">⬅️ Home</Link>
+                <Link to="/" className="button">⬅ Home</Link>
             </div>
-            <form className="m-12 flex-auto" onSubmit={handleSubmit}>
-                <input className="border-2 border-black rounded-md" name="image" placeholder="Image" type="text" value={image} onChange={(e) => setImage(e.target.value)}></input>
-                <input className="border-2 border-black rounded-md" name="year" placeholder="Year" type="text" value={year} onChange={(e) => setYear(e.target.value)}></input>
-                <input className="border-2 border-black rounded-md" name="title" placeholder="Title" type="text" value={title} onChange={(e) => setTitle(e.target.value)}></input>
-                <input className="border-2 border-black rounded-md" name="company" placeholder="Inventor or Company" type="text" value={company} onChange={(e) => setCompany(e.target.value)}></input>
-                <input className="border-2 border-black rounded-md" name="wikipedia" placeholder="Wikipedia" type="text" value={wikipedia} onChange={(e) => setWikipedia(e.target.value)}></input>
-                <input className="border-2 border-black rounded-md" name="details" placeholder="Paragraph" type="text" value={details} onChange={(e) => setDetails(e.target.value)} />
+            <form className="m-12 flex-auto font-Inter" onSubmit={handleSubmit}>
+                <h1>Image</h1>
+                <input className="border-2 border-black rounded-md" name="image" type="text" value={image} onChange={(e) => setImage(e.target.value)} />
+                <h1>Year</h1>
+                <input className="border-2 border-black rounded-md" name="year" type="text" value={year} onChange={(e) => setYear(e.target.value)} />
+                <h1>Title</h1>
+                <input className="border-2 border-black rounded-md" name="title" type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+                <h1>Company</h1>
+                <input className="border-2 border-black rounded-md" name="company" type="text" value={company} onChange={(e) => setCompany(e.target.value)} />
+                <h1>Wikipedia</h1>
+                <input className="border-2 border-black rounded-md" name="wikipedia" type="text" value={wikipedia} onChange={(e) => setWikipedia(e.target.value)} />
+                <h1>Paragraph</h1>
+                <input className="border-2 border-black rounded-md" name="details" type="text" value={details} onChange={(e) => setDetails(e.target.value)} />
+                {/* Too lazy to use tailwind so used an empty div to seperate the button and inputs */}
+                <div></div>
                 <button className="button" type="submit">Submit</button>
             </form>
         </>

@@ -3,16 +3,16 @@ import TimeCard from "./TimeCard"
 import Search from "./Search"
 import DecadeFilter from "./DecadeFilter"
 
-function Timeline({ timeLine, searchTimeline, setSearchTimeLine, decade, setDecade }) {
+function Timeline({ timeLine, searchTimeLine, setSearchTimeLine, decade, setDecade }) {
 
     // Filters through timeline for the Search function and decade filter
     const filteredTimeLine = timeLine.filter((time) => {
         const decadeNum = Number(decade)
         const decadeFilter = (decadeNum + 9)
         if (decade === "All") {
-            return time.title.toLowerCase().includes(searchTimeline.toLowerCase())
+            return time.title.toLowerCase().includes(searchTimeLine.toLowerCase())
         } else {
-            return time.title.toLowerCase().includes(searchTimeline.toLowerCase()) && time.year >= decadeNum && time.year <= decadeFilter
+            return time.title.toLowerCase().includes(searchTimeLine.toLowerCase()) && time.year >= decadeNum && time.year <= decadeFilter
         }
     })
 

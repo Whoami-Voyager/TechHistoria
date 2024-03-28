@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import TimeCard from "./TimeCard"
 
-function TimeDetails() {
+function TimeDetails({ setSearchTimeLine, setDecade }) {
     // the state that stores all the Detail information
     const [detail, setDetail] = useState([])
     // this parameter grabs the selected Id to render the correct information
@@ -30,6 +30,12 @@ function TimeDetails() {
                 })
         })
     }, [detail])
+
+    // Resets search state when component renders
+    useEffect(() => {
+        setDecade("All")
+        setSearchTimeLine("")
+    }, [])
 
     // Scrolls to the top of the window when detail is clicked
     const scrollToTop = () => {
@@ -59,7 +65,7 @@ function TimeDetails() {
         <>
             <h1 className="font-IBM text-blue-400 text-center text-3xl my-12 pb-10 sm:text-5xl lg:text-6xl xl:text-9xl sm:my-12 md:my-12 lg:my-28 ">TechHistoria</h1>
             <div className="my-6">
-                <Link to="/" className="button"><img src="../../public/next.png"/> Home</Link>
+                <Link to="/" className="button">⬅ Home</Link>
             </div>
             <h1 className="my-20 text-4xl text-center xl:text-7xl">{detail.title}</h1>
             <div className="flex flex-col m-5 font-Inter xl:flex-row">
@@ -70,7 +76,10 @@ function TimeDetails() {
                 </div>
             </div>
             {paragraphs}
-            <a href={detail.wikipedia} target="_blank" rel="noreferrer" className="border-2 border-gray-400 rounded-lg p-2 m-6 text-center font-Inter shadow-lg hover:border-gray-900">Wikipedia</a>
+            <a href={detail.wikipedia} target="_blank" rel="noreferrer" className="button w-32 flex items-center justify-center">
+                Wikipedia
+                <img className="h-6 w-6 ml-2" src="https://www.freepnglogos.com/uploads/wikipedia-logo-png/file-wikipedia-svg-logo-free-download-4.png" alt="Wikipedia" />
+            </a>
             <h2 className="m-12 text-center p-2 text-3xl font-Inter xl:m-36">Associated Historical events:</h2>
             {historyDetail}
         </>

@@ -10,7 +10,7 @@ function App() {
   // Timeline State that holds all the timeline data
   const [timeLine, setTimeLine] = useState([])
   // Search Timeline state
-  const [searchTimeline, setSearchTimeLine] = useState("")
+  const [searchTimeLine, setSearchTimeLine] = useState("")
   // State used to store decade so we can sort by it
   const [decade, setDecade] = useState("All")
 
@@ -43,8 +43,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Timeline timeLine={timeLine} searchTimeline={searchTimeline} setSearchTimeLine={setSearchTimeLine} decade={decade} setDecade={setDecade} />} />
-        <Route path='/history/:id' element={<TimeDetails />} />
+        <Route path='/' element={<Timeline timeLine={timeLine} searchTimeLine={searchTimeLine} setSearchTimeLine={setSearchTimeLine} decade={decade} setDecade={setDecade} />} />
+        <Route path='/history/:id' element={<TimeDetails setSearchTimeLine={setSearchTimeLine} setDecade={setDecade} />} />
         <Route path='/createhistory' element={<CreateEvent addHistory={addHistory} />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
