@@ -35,6 +35,8 @@ function TimeDetails() {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
+    // Scrolls when details are initially loaded
+    scrollToTop()
 
     // resets the cards at the bottom of details and scrolls
     const handleDetailLinkClick = () => {
@@ -55,9 +57,9 @@ function TimeDetails() {
     // renders all the details of the event
     return (
         <>
-            <h1 className="font-IBM text-blue-400 text-center text-1xl my-12 pb-10 sm:text-5xl lg:text-6xl xl:text-9xl sm:my-12 md:my-12 lg:my-28 ">TechHistoria</h1>
+            <h1 className="font-IBM text-blue-400 text-center text-3xl my-12 pb-10 sm:text-5xl lg:text-6xl xl:text-9xl sm:my-12 md:my-12 lg:my-28 ">TechHistoria</h1>
             <div className="my-6">
-                <Link to="/" className="button">⬅️ Home</Link>
+                <Link to="/" className="button"><img src="../../public/next.png"/> Home</Link>
             </div>
             <h1 className="my-20 text-4xl text-center xl:text-7xl">{detail.title}</h1>
             <div className="flex flex-col m-5 font-Inter xl:flex-row">

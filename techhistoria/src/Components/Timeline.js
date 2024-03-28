@@ -5,13 +5,13 @@ import DecadeFilter from "./DecadeFilter"
 
 function Timeline({ timeLine, searchTimeline, setSearchTimeLine, decade, setDecade }) {
 
-    // Filters through timeline for the Search function
+    // Filters through timeline for the Search function and decade filter
     const filteredTimeLine = timeLine.filter((time) => {
+        const decadeNum = Number(decade)
+        const decadeFilter = (decadeNum + 9)
         if (decade === "All") {
             return time.title.toLowerCase().includes(searchTimeline.toLowerCase())
         } else {
-            const decadeNum = Number(decade)
-            const decadeFilter = (decadeNum + 9)
             return time.title.toLowerCase().includes(searchTimeline.toLowerCase()) && time.year >= decadeNum && time.year <= decadeFilter
         }
     })
