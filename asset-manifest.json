@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.1a1ff8a6.css",
-    "main.js": "/static/js/main.abb5de9a.js",
+    "main.js": "/static/js/main.cb17f145.js",
     "static/media/Inter-Regular.otf": "/static/media/Inter-Regular.a416f4674fad5f019461.otf",
     "static/media/IBM-Logo.ttf": "/static/media/IBM-Logo.ea9b8ea99532f40a5c49.ttf",
     "index.html": "/index.html",
     "main.1a1ff8a6.css.map": "/static/css/main.1a1ff8a6.css.map",
-    "main.abb5de9a.js.map": "/static/js/main.abb5de9a.js.map"
+    "main.cb17f145.js.map": "/static/js/main.cb17f145.js.map"
   },
   "entrypoints": [
     "static/css/main.1a1ff8a6.css",
-    "static/js/main.abb5de9a.js"
+    "static/js/main.cb17f145.js"
   ]
 }
