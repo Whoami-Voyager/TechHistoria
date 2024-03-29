@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.b4693f79.css",
+    "main.js": "/react-gh-pages/static/js/main.abb5de9a.js",
+    "static/media/Inter-Regular.otf": "/react-gh-pages/static/media/Inter-Regular.a416f4674fad5f019461.otf",
+    "static/media/IBM-Logo.ttf": "/react-gh-pages/static/media/IBM-Logo.ea9b8ea99532f40a5c49.ttf",
+    "index.html": "/react-gh-pages/index.html",
+    "main.b4693f79.css.map": "/react-gh-pages/static/css/main.b4693f79.css.map",
+    "main.abb5de9a.js.map": "/react-gh-pages/static/js/main.abb5de9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4693f79.css",
+    "static/js/main.abb5de9a.js"
+  ]
+}
