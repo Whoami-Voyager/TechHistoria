@@ -43,8 +43,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Timeline timeLine={timeLine} searchTimeLine={searchTimeLine} setSearchTimeLine={setSearchTimeLine} decade={decade} setDecade={setDecade} />} />
-        <Route path='/history/:id' element={<TimeDetails setSearchTimeLine={setSearchTimeLine} setDecade={setDecade} />} />
+        <Route path='/TechHistoria' element={<Timeline timeLine={timeLine} searchTimeLine={searchTimeLine} setSearchTimeLine={setSearchTimeLine} decade={decade} setDecade={setDecade} />} />
+        <Route path='/history/:id' element={<TimeDetails setSearchTimeLine={setSearchTimeLine} setDecade={setDecade} timeLine={timeLine} />} />
         <Route path='/createhistory' element={<CreateEvent addHistory={addHistory} />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>

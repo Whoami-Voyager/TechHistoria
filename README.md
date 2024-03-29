@@ -14,4 +14,4 @@ TechHistoria is a web application that allows users to explore major technologic
 
 - **Error Page**: Go ahead, give it a visit. I dare you.
 
-[Deployed Website](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
+[Deployed Website](https://whoami-voyager.github.io/TechHistoria/).
