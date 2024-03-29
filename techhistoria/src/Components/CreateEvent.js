@@ -36,8 +36,9 @@ function CreateEvent({ addHistory }) {
     return (
         <>
             <div className="my-6">
-                <Link to="/" className="button">⬅ Home</Link>
+                <Link to="/TechHistoria" className="button">⬅ Home</Link>
             </div>
+            <h1 className="m-10 text-2xl font-Inter">Note: After deploying this website, I have decided not to make this feature functional since it was a requirement for the project but no longer necessary</h1>
             <form className="m-12 flex-auto font-Inter" onSubmit={handleSubmit}>
                 <h1>Image</h1>
                 <input className="border-2 border-black rounded-md" name="image" type="text" value={image} onChange={(e) => setImage(e.target.value)} />

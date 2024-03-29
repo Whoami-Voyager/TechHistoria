@@ -44,7 +44,7 @@ function TimeDetails({ setSearchTimeLine, setDecade, timeLine }) {
         <>
             <h1 className="font-IBM text-blue-400 text-center text-3xl my-12 pb-10 sm:text-5xl lg:text-6xl xl:text-9xl sm:my-12 md:my-12 lg:my-28 ">TechHistoria</h1>
             <div className="my-6">
-                <Link to="/" className="button">⬅ Home</Link>
+                <Link to="/TechHistoria" className="button">⬅ Home</Link>
             </div>
             <h1 className="my-20 text-4xl text-center xl:text-7xl">{timeObj?.title}</h1>
             <div className="flex flex-col m-5 font-Inter xl:flex-row">
