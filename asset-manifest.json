@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/TechHistoria/static/css/main.8b45fbab.css",
-    "main.js": "/TechHistoria/static/js/main.cb17f145.js",
+    "main.js": "/TechHistoria/static/js/main.4c2d1473.js",
     "static/media/Inter-Regular.otf": "/TechHistoria/static/media/Inter-Regular.a416f4674fad5f019461.otf",
     "static/media/IBM-Logo.ttf": "/TechHistoria/static/media/IBM-Logo.ea9b8ea99532f40a5c49.ttf",
     "index.html": "/TechHistoria/index.html",
     "main.8b45fbab.css.map": "/TechHistoria/static/css/main.8b45fbab.css.map",
-    "main.cb17f145.js.map": "/TechHistoria/static/js/main.cb17f145.js.map"
+    "main.4c2d1473.js.map": "/TechHistoria/static/js/main.4c2d1473.js.map"
   },
   "entrypoints": [
     "static/css/main.8b45fbab.css",
-    "static/js/main.cb17f145.js"
+    "static/js/main.4c2d1473.js"
   ]
 }
